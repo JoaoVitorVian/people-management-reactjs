@@ -14,7 +14,8 @@ Antes de começar, certifique-se de ter os seguintes softwares instalados em sua
 
 ### 1. Instalar Dependências
 
-npm install
+- npm install
+- npm run dev
 
 ### 2. Configurar environments
 serviceUrl e coloque a url que está rodando o seu back-end 'http://localhost:porta/api
