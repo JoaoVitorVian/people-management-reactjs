@@ -1,5 +1,5 @@
 import { Admin, Resource } from 'react-admin';
-import dataProvider from './services/dataprovider';
+import dataProvider from './services/dataProviderService';
 import PersonList from './components/Person/PersonList';
 import { MyLayout } from './components/MyLayout/MyLayout';
 import EstablishmentList from './components/Establishment/EstablishmentList';
