@@ -4,6 +4,7 @@ import { useDataProvider } from 'react-admin';
 import { Establishment } from '../Interfaces/establishments';
 import { Role } from '../Interfaces/role';
 import { required, email, minLength, maxLength } from 'react-admin';
+import CpfInput from '../utils/cpf/cpfInput';
 
 const validateCpf = [
     required('CPF is required')
@@ -67,7 +68,7 @@ const PersonCreate: React.FC<CreateProps<RaRecord<Identifier>, Error>> = (props)
         <Create {...props}>
             <SimpleForm mode="onBlur" reValidateMode="onBlur">
                 <TextInput source="name" validate={validateName} />
-                <TextInput source="cpf" validate={validateCpf} />
+                <CpfInput source="cpf" validate={validateCpf} />
                 <DateInput source="birthDate" validate={validateBirthDate} />
                 <DateInput source="admissionDate" validate={validateAdmissionDate} />
                 <TextInput source="email" validate={validateEmail} />

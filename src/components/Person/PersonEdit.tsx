@@ -3,6 +3,7 @@ import { Edit, SimpleForm, TextInput, DateInput, SelectInput, EditProps, RaRecor
 import { useDataProvider } from 'react-admin';
 import { Role } from '../Interfaces/role';
 import { Establishment } from '../Interfaces/establishments';
+import CpfInput from '../utils/cpf/cpfInput';
 
 const validateCpf = [
     required('CPF is required')
@@ -67,7 +68,7 @@ const PersonEdit: React.FC<EditProps<RaRecord<Identifier>, Error>> = (props) => 
             <SimpleForm>
                 <TextInput source="id" disabled />
                 <TextInput source="name" validate={validateName} />
-                <TextInput source="cpf" validate={validateCpf} />
+                <CpfInput source="cpf" validate={validateCpf} />
                 <DateInput source="birthDate" validate={validateBirthDate} />
                 <DateInput source="admissionDate" validate={validateAdmissionDate} />
                 <TextInput source="email" validate={validateEmail} />
